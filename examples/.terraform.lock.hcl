@@ -5,6 +5,6 @@ provider "hashicorp.com/edu/cli" {
   version     = "0.2.0"
   constraints = "0.2.0"
   hashes = [
-    "h1:gijyFkoebXmOb0Z0r8/eNCFU3ggEcYxMjTcMamceUCE=",
+    "h1:tAnEoZA8g3JwgWsR1VrzsFuRw6EtbC/jLhtxkFXx22E=",
   ]
 }

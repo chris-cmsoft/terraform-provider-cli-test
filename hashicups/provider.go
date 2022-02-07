@@ -10,6 +10,7 @@ func Provider() *schema.Provider {
 		ResourcesMap: map[string]*schema.Resource{},
 		DataSourcesMap: map[string]*schema.Resource{
 			"cli_onepassword_version": dataSourceOnePasswordVersion(),
+			"cli_onepassword_users": dataSourceOnePasswordUsers(),
 		},
 	}
 }
