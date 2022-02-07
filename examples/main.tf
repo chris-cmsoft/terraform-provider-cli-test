@@ -1,20 +1,16 @@
 terraform {
   required_providers {
-    hashicups = {
+    cli = {
       version = "0.2"
-      source  = "hashicorp.com/edu/hashicups"
+      source  = "hashicorp.com/edu/cli"
     }
   }
 }
 
-provider "hashicups" {}
+provider "cli" {}
 
-module "psl" {
-  source = "./coffee"
+data "cli_onepassword_version" "local" {}
 
-  coffee_name = "Packer Spiced Latte"
-}
-
-output "psl" {
-  value = module.psl.coffee
+output "onepassword-version" {
+  value = data.cli_onepassword_version.local.version
 }
