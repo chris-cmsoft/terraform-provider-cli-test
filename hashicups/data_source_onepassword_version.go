@@ -58,31 +58,3 @@ func dataSourceOnePasswordVersionRead(ctx context.Context, d *schema.ResourceDat
 
 	return diags
 }
-
-//
-//func (r dataSourceVersion) Read(ctx context.Context, req tfsdk.ReadDataSourceRequest, resp *tfsdk.ReadDataSourceResponse) {
-//	resourceState := dataSourceVersionType{}
-//	exe, _ := os.Executable()
-//	output, err := RunCommandWithEnvReturnOutput(
-//		exe,
-//		map[string]string{packer_interop.TPPRunPacker: "true"},
-//		"version")
-//	if err != nil {
-//		resp.Diagnostics.AddError("Failed to run packer", err.Error())
-//		return
-//	}
-//
-//	if len(output) == 0 {
-//		resp.Diagnostics.AddError("Unexpected output", "Packer did not output anything")
-//		return
-//	}
-//
-//	resourceState.Version = strings.TrimPrefix(
-//		strings.TrimSpace(strings.TrimPrefix(string(output), "Packer")), "v")
-//
-//	diags := resp.State.Set(ctx, &resourceState)
-//	resp.Diagnostics.Append(diags...)
-//	if resp.Diagnostics.HasError() {
-//		return
-//	}
-//}
